@@ -1,8 +1,8 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 
-const Service = () => {
-  const { id } = useParams();
+const Service = ({ id: serviceId = 1234 }) => {
+  const { id = serviceId } = useParams();
   const data = {
     "1234": {
       title: "Service 1",
@@ -14,12 +14,12 @@ const Service = () => {
     },
   };
 
-  return (
+  return data && data[id] ? (
     <div>
       <h2>{data[id].title}</h2>
       <p>{data[id].description}</p>
     </div>
-  );
+  ) : null;
 };
 
 export default Service;
