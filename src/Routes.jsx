@@ -5,6 +5,7 @@ import About from "./Pages/About/About";
 import Services from "./Pages/Services/Services";
 import Login from "./Pages/Login/Login";
 import PremiumContent from "./Pages/PremiumContent/PremiumContent";
+import Products from "./Pages/Products/Products";
 
 const Routes = () => {
   const isLoggedIn = false;
@@ -15,6 +16,7 @@ const Routes = () => {
       <Route path="/about" component={About} />
       <Route path="/Services" component={Services} />
       <Route path="/login" component={Login} />
+      <Route path="/products" component={Products} />
       <Route path="/premium-content">
         {isLoggedIn ? <PremiumContent /> : <Redirect to="/login" />}
       </Route>

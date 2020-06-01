@@ -50,6 +50,33 @@ const Header = () => {
               Register
             </Link>
           </li>
+          <li className="nav-item dropdown">
+            <a
+              className="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Products
+            </a>
+            <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+              <Link
+                className="dropdown-item"
+                to="/products?category=electronics&test=1"
+              >
+                Electronics
+              </Link>
+              <Link
+                className="dropdown-item"
+                to="/products?category=mobiles&test=2"
+              >
+                Mobiles
+              </Link>
+            </div>
+          </li>
         </ul>
       </div>
     </nav>
